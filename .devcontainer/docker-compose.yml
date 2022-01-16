@@ -12,4 +12,7 @@ services:
         VARIANT: "16-bullseye"
     volumes:
       - ..:/home/node/ws:cached
+    environment:
+      # Docker host IP adress for `expo start --lan`.
+      - REACT_NATIVE_PACKAGER_HOSTNAME=${REACT_NATIVE_PACKAGER_HOSTNAME}
     tty: true
